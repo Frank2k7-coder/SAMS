@@ -1,0 +1,104 @@
+.user-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-details-container h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    font-size: 2rem;
+}
+
+.user-details-container p {
+    margin: 15px 0;
+    padding: 12px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.user-details-container p:hover {
+    background-color: #f1f8ff;
+    transform: translateX(5px);
+}
+
+.user-details-container strong {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-right: 10px;
+    min-width: 150px;
+    display: inline-block;
+}
+
+.loading-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-top: 50px;
+}
+
+.error-message {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 20px;
+    background-color: #ffeaea;
+    border: 1px solid #ffcdd2;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-details-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .user-details-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .user-details-container p {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .user-details-container strong {
+        min-width: 120px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-details-container {
+        padding: 10px;
+    }
+    
+    .user-details-container h2 {
+        font-size: 1.3rem;
+    }
+    
+    .user-details-container p {
+        padding: 8px 12px;
+        margin: 10px 0;
+    }
+    
+    .user-details-container strong {
+        display: block;
+        margin-bottom: 5px;
+        min-width: auto;
+    }
+}

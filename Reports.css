@@ -1,0 +1,105 @@
+.reports-page {
+  max-width: 900px;
+  margin: 20px auto;
+  margin-left: 200px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2563eb;
+}
+
+.report-form, .filter-bar {
+  margin: 20px 0;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.filter-bar input, .filter-bar select {
+  flex: 1;
+}
+
+.reports-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.reports-list th, .reports-list td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.reports-list th {
+  background: #2563eb;
+  color: white;
+}
+
+.reports-list tr:nth-child(even) {
+  background: #f3f4f6;
+}
+
+.reports-list tr:hover {
+  background: #e5e7eb;
+}

@@ -1,0 +1,307 @@
+.chat-container {
+  display: flex;
+
+  height: 80vh;
+  margin-left: 10%;
+  width:80%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 25%;
+  background: #f5f5f5;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  display: grid;
+
+  word-wrap: break-word;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sidebar ul {
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background: #e56a00;
+  color: #fff;
+}
+
+/* Chat Area */
+.chat-area {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 15px;
+  border-bottom: 1px solid  #e56a00;;
+  background: #f9f9f9;
+}
+
+/* FIXED: Chat Messages Container */
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+  background: #fafafa;
+  gap: 10px;
+}
+
+/* FIXED: Message Styles */
+.message {
+  max-width: 60%;
+  padding: 10px 15px;
+  display: grid;
+  justify-content: space-between;
+  border-radius: 20px;
+  word-wrap: break-word;
+}
+
+/* Sent message (Me) - Right side */
+.message.me {
+  align-self: flex-end;
+  background-color:rgb(87, 84, 84);
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+/* Received message (Them) - Left side */
+.message.them {
+  align-self: flex-start;
+  background-color: #e4e6eb;
+  color: black;
+  border-bottom-left-radius: 5px;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+
+.chat-input textarea {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 10px 15px;
+  border: none;
+  background:  #e56a00;
+  width: 60px;
+  color: white;
+  cursor: pointer;
+}
+
+/* No Chat */
+.no-chat {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+.message-time {
+  font-size: 11px;
+  color: gray;
+  text-align: right;
+}
+.unread-badge {
+  display: inline-block;
+  background-color: #c48784; /* bright red */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 12px; /* circular pill shape */
+  margin-left: 8px; /* space from username */
+  min-width: 20px;
+  text-align: center;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+.emoji-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+/* Style the file input directly */
+.chat-input input[type="file"] {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+  max-width: 150px;
+}
+
+.chat-input input[type="file"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.chat-input input[type="file"]:active {
+  transform: translateY(0);
+}
+
+/* Hide the default "no file chosen" text */
+.chat-input input[type="file"]::file-selector-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Customize the button text */
+.chat-input input[type="file"]::before {
+  content: "📎";
+}
+
+/* Remove the default file text */
+.chat-input input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+  padding: 0;
+}
+
+.chat-input input[type="file"]::file-selector-button {
+  visibility: hidden;
+  width: 0;
+  padding: 0;
+}
+
+
+.file-name-display {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background: #e3f2fd;
+  border-radius: 15px;
+  font-size: 12px;
+  color:  #e56a00;
+  border: 1px solid #bbdefb;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color:  #e56a00;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.remove-file-btn:hover {
+  background: #bbdefb;
+}
+
+
+.sidebar-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover; /* ✅ This prevents image distortion */
+  border: 2px solid #ddd;
+  background-color: #f0f0f0;
+}
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.typing-indicator {
+  padding: 10px 15px;
+  font-style: italic;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+}
+
+.typing-dots {
+  display: flex;
+  gap: 3px;
+}
+
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #666;
+  animation: typing-bounce 1.4s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+.typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing-bounce {
+  0%, 80%, 100% { 
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  40% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+

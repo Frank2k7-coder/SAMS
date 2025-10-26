@@ -1,0 +1,159 @@
+        .notifications {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 800px;
+            margin: 20px auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+      
+        /* Header */
+        .notifications h3 {
+            background: linear-gradient(90deg, #ff7a00 0%, #683608 100%);
+            color: white;
+            padding: 20px;
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .notifications h3::before {
+            content: '\f0f3';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+        }
+        
+        /* Content area */
+        .notifications > p {
+            text-align: center;
+            padding: 40px 20px;
+            color: #ff7a00;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        
+        .notifications > p::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            display: block;
+            font-size: 3rem;
+            margin-bottom: 15px;
+             color: #ff7a00;
+        }
+        
+        /* Notification list */
+        .notifications ul {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        /* Notification items */
+        .notifications li {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #ff7a00;
+            
+            border-radius: 8px;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .notifications li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .notifications strong {
+             color: #ff7a00;
+            display: block;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+        
+        .notifications li::before {
+            content: '\f071';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #ff4757;
+            margin-right: 10px;
+        }
+        
+        /* Status indicators */
+        .notifications li [class*="Status:"] {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        .notifications li [class*="Status: active"],
+        .notifications li [class*="Status: Active"] {
+             background: #ff7a00;
+            color: white;
+        }
+        
+        .notifications li [class*="Status: resolved"],
+        .notifications li [class*="Status: Resolved"] {
+            background-color: #2ed573;
+            color: white;
+        }
+        
+        .notifications li [class*="Status: pending"],
+        .notifications li [class*="Status: Pending"] {
+            background-color: #ffa502;
+            color: white;
+        }
+        
+        /* Animation for new notifications */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Scrollbar styling */
+        .notifications ul::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .notifications ul::-webkit-scrollbar-track {
+             background: #ff7a00;
+            border-radius: 4px;
+        }
+        
+        .notifications ul::-webkit-scrollbar-thumb {
+             background: #ff7a00;
+            border-radius: 4px;
+        }
+        
+        .notifications ul::-webkit-scrollbar-thumb:hover {
+             background: #ff7a00;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .notifications {
+                border-radius: 12px;
+                margin: 10px;
+            }
+            
+            .notifications h3 {
+                padding: 15px;
+                font-size: 1.3rem;
+            }
+            
+            .notifications li {
+                padding: 12px;
+            }
+            
+            .notifications ul {
+                padding: 15px;
+            }
+        }
